@@ -2,8 +2,8 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le : lun. 30 jan. 2023 à 23:05
+-- HÃ´te : localhost
+-- GÃ©nÃ©rÃ© le : lun. 30 jan. 2023 Ã  23:05
 -- Version du serveur : 10.3.36-MariaDB-0+deb10u2
 -- Version de PHP : 7.3.31-1~deb10u2
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `elysy1942386`
+-- Base de donnÃ©es : `elysy1942386`
 --
 
 -- --------------------------------------------------------
@@ -41,7 +41,7 @@ CREATE TABLE `booking` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `booking`
+-- DÃ©chargement des donnÃ©es de la table `booking`
 --
 
 INSERT INTO `booking` (`booking_id`, `cust_id`, `arrival`, `departure`, `numPeople`, `total_payment`, `payment_id`, `room_id`, `htl_id`, `staff_id`) VALUES
@@ -63,7 +63,7 @@ CREATE TABLE `checkout` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `checkout`
+-- DÃ©chargement des donnÃ©es de la table `checkout`
 --
 
 INSERT INTO `checkout` (`checkout_id`, `checktime`, `status_id`, `booking_id`, `staff_id`) VALUES
@@ -84,7 +84,7 @@ CREATE TABLE `country` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `country`
+-- DÃ©chargement des donnÃ©es de la table `country`
 --
 
 INSERT INTO `country` (`country_id`, `iso`, `name_country`, `phonecode`) VALUES
@@ -193,7 +193,7 @@ INSERT INTO `country` (`country_id`, `iso`, `name_country`, `phonecode`) VALUES
 (103, 'gb', 'Irlande-du-Nord', 45),
 (104, 'il', 'Israel', 972),
 (105, 'it', 'Italie', 39),
-(106, 'jm', 'Jamaïque', 1876),
+(106, 'jm', 'JamaÃ¯que', 1876),
 (107, 'jp', 'Japon', 81),
 (108, 'jo', 'Jordanie', 962),
 (109, 'kz', 'Kazakhstan', 7),
@@ -344,7 +344,7 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `customer`
+-- DÃ©chargement des donnÃ©es de la table `customer`
 --
 
 INSERT INTO `customer` (`cust_id`, `cust_gender_id`, `cust_first_name`, `cust_last_name`, `cust_address1`, `cust_address2`, `cust_address3`, `cust_zipcode`, `cust_city_name`, `cust_country_id`, `cust_phone_num`, `cust_email`) VALUES
@@ -363,7 +363,7 @@ CREATE TABLE `gender` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `gender`
+-- DÃ©chargement des donnÃ©es de la table `gender`
 --
 
 INSERT INTO `gender` (`gender_id`, `gender_name`) VALUES
@@ -391,7 +391,7 @@ CREATE TABLE `hotel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `hotel`
+-- DÃ©chargement des donnÃ©es de la table `hotel`
 --
 
 INSERT INTO `hotel` (`htl_id`, `htl_name`, `htl_address1`, `htl_address2`, `htl_address3`, `htl_zipcode`, `htl_city_name`, `htl_country_id`, `htl_phone_contact`, `htl_email_contact`) VALUES
@@ -412,7 +412,7 @@ CREATE TABLE `htlpurchase` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `htlpurchase`
+-- DÃ©chargement des donnÃ©es de la table `htlpurchase`
 --
 
 INSERT INTO `htlpurchase` (`htl_id`, `product_id`, `dates_purchase`, `quantity`) VALUES
@@ -433,7 +433,7 @@ CREATE TABLE `inventory` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `inventory`
+-- DÃ©chargement des donnÃ©es de la table `inventory`
 --
 
 INSERT INTO `inventory` (`htl_id`, `date_inventory`, `product_id`, `quantity`) VALUES
@@ -452,7 +452,7 @@ CREATE TABLE `paymenttype` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `paymenttype`
+-- DÃ©chargement des donnÃ©es de la table `paymenttype`
 --
 
 INSERT INTO `paymenttype` (`payment_id`, `payment_type`) VALUES
@@ -475,7 +475,7 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `product`
+-- DÃ©chargement des donnÃ©es de la table `product`
 --
 
 INSERT INTO `product` (`product_id`, `pvd_id`, `reference`, `price_product`, `description_product`) VALUES
@@ -505,7 +505,7 @@ CREATE TABLE `provider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `provider`
+-- DÃ©chargement des donnÃ©es de la table `provider`
 --
 
 INSERT INTO `provider` (`pvd_id`, `pvd_name`, `pvd_address1`, `pvd_address2`, `pvd_address3`, `pvd_zipcode`, `pvd_city_name`, `pvd_country_id`, `pvd_contact_name`, `pvd_phone_num`, `pvd_email`) VALUES
@@ -532,7 +532,7 @@ CREATE TABLE `repair` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `repair`
+-- DÃ©chargement des donnÃ©es de la table `repair`
 --
 
 INSERT INTO `repair` (`room_id`, `htl_id`, `pvd_id`, `dates_review`, `repairtype_id`, `description_repair`, `repair_status`, `dates_repair`, `amount_repair`) VALUES
@@ -551,7 +551,7 @@ CREATE TABLE `repairtype` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `repairtype`
+-- DÃ©chargement des donnÃ©es de la table `repairtype`
 --
 
 INSERT INTO `repairtype` (`repairtype_id`, `repairtype_descrption`) VALUES
@@ -571,7 +571,7 @@ CREATE TABLE `role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `role`
+-- DÃ©chargement des donnÃ©es de la table `role`
 --
 
 INSERT INTO `role` (`role_id`, `role_name`) VALUES
@@ -599,7 +599,7 @@ CREATE TABLE `room` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `room`
+-- DÃ©chargement des donnÃ©es de la table `room`
 --
 
 INSERT INTO `room` (`room_id`, `htl_id`, `typeroom_id`, `price_room`, `surface`, `handicap`, `vip`, `smoking`, `animals`) VALUES
@@ -633,7 +633,7 @@ CREATE TABLE `staff` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `staff`
+-- DÃ©chargement des donnÃ©es de la table `staff`
 --
 
 INSERT INTO `staff` (`staff_id`, `htl_id`, `staff_gender_id`, `staff_first_name`, `staff_last_name`, `staff_address1`, `staff_address2`, `staff_address3`, `staff_zipcode`, `staff_city_name`, `staff_country_id`, `staff_phone_num`, `staff_email`, `staff_role_id`, `salary`, `dates_recruitment`, `dates_end_contract`) VALUES
@@ -652,7 +652,7 @@ CREATE TABLE `statuscheckout` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `statuscheckout`
+-- DÃ©chargement des donnÃ©es de la table `statuscheckout`
 --
 
 INSERT INTO `statuscheckout` (`status_id`, `status_type`) VALUES
@@ -672,7 +672,7 @@ CREATE TABLE `typeroom` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `typeroom`
+-- DÃ©chargement des donnÃ©es de la table `typeroom`
 --
 
 INSERT INTO `typeroom` (`typeroom_id`, `room_description`) VALUES
@@ -681,7 +681,7 @@ INSERT INTO `typeroom` (`typeroom_id`, `room_description`) VALUES
 (3, 'T3');
 
 --
--- Index pour les tables déchargées
+-- Index pour les tables dÃ©chargÃ©es
 --
 
 --
@@ -814,7 +814,7 @@ ALTER TABLE `typeroom`
   ADD PRIMARY KEY (`typeroom_id`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT pour les tables dÃ©chargÃ©es
 --
 
 --
@@ -908,7 +908,7 @@ ALTER TABLE `typeroom`
   MODIFY `typeroom_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- Contraintes pour les tables déchargées
+-- Contraintes pour les tables dÃ©chargÃ©es
 --
 
 --
