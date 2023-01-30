@@ -1,7 +1,6 @@
 # GDD-Neil-Project
 -- --------------------------------------------------------
 --   La base de données a été créée sur mysql
---
 --   Création de la base de données hotels
 --   Lancer le script de création hotels.sql
 --   les inserts constituent un jeu d'essaie
@@ -13,7 +12,7 @@
 --pourront être lancer
 
 
---Liste des client pourra donner l'ensemble des clients des hotels du groupe
+--Liste des client pourra donner l'ensemble des clients des hotels du groupe.
 
 1-Liste des client :
 
@@ -37,7 +36,7 @@ INNER JOIN country ON customer.cust_country_id = country.country_id;
 
 
 
---Liste des client pourra monitorer le staff
+--Liste des client pourra monitorer le staff.
 
 
 2-Liste des employés :
@@ -68,7 +67,7 @@ INNER JOIN role ON staff.staff_role_id = role.role_id;
 
 
 
---Liste des hotels selon les pays
+--Liste des hotels selon les pays.
 
 3-Liste des hotels en France :
 SELECT
@@ -88,7 +87,7 @@ INNER JOIN country ON hotel.htl_country_id = country.country_id
 WHERE name_country = 'France';
 
 
---Veiller a suivre la liste des prestataires
+--Veiller a suivre la liste des prestataires.
 
 4-Liste des fournisseurs :
 SELECT
@@ -107,7 +106,7 @@ INNER JOIN country ON provider.pvd_country_id = country.country_id;
 
 
 
---Une vue sur les chambre des différents hotels du groupe
+--Une vue sur les chambre des différents hotels du groupe.
 
 5-Liste des chambres :
 
@@ -171,7 +170,7 @@ INNER JOIN country ON hotel.htl_country_id = country.country_id
 INNER JOIN product ON htlpurchase.product_id = product.product_id;
 
 
---la consommation en fourniture par hotel
+--la consommation en fourniture par hotel.
 
 8- Liste des inventaires par hotel :
 
@@ -212,7 +211,7 @@ INNER JOIN product ON htlpurchase.product_id = product.product_id
 INNER JOIN inventory ON htlpurchase.htl_id = inventory.htl_id and htlpurchase.product_id = inventory.product_id;
 
 
---L'état des chambre et suivi des réparations
+--L'état des chambre et suivi des réparations.
 
 10- Liste des chambres avec avec des réparations :
 
@@ -233,7 +232,7 @@ INNER JOIN repair ON room.htl_id = repair.htl_id and room.room_id = repair.room_
 
 
 
--- la situation des sorties et la gestion des anomalies
+-- la situation des sorties et la gestion des anomalies.
 
 11- Liste des checkouts :
 
@@ -264,7 +263,7 @@ INNER JOIN staff ON booking.staff_id = staff.staff_id;
 
 
 
--- chiffre d'affaire 
+-- chiffre d'affaire.
 
 12- Chiffre d'affaire par pays:
 
@@ -292,7 +291,7 @@ WHERE 	arrival BETWEEN '2022-12-01 00:00:00' AND '2022-12-31 23:59:59';
 
 
 
--- gestion des ressources humaines et performence
+-- gestion des ressources humaines et performence.
 
 14- Chiffre d'affaire par employé :
 
@@ -304,7 +303,7 @@ FROM booking
 INNER JOIN staff ON booking.staff_id = staff.staff_id;
 
 
--- Monitoring des prestataires
+-- Monitoring des prestataires.
 
 15- Dépense par prestataire :
 
